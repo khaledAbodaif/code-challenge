@@ -87,7 +87,7 @@ This solution follows the Onion Architecture pattern, with all layers wrapped wi
 
 # API Documentation
 
-url : http://localhost/api/order
+url : [ Post ] http://localhost/api/order
 
   ```json  payload : {
 
@@ -121,6 +121,4 @@ there is a custom exception  that has dynamic logging to custom channel like tra
 
 i am using trunk-flow as a branching strategy 
 
-> there is a branch master , this branch will contain only project init so we can craete a pull request for each feature to review each feature
 
-> the develop branch is the up-to-date
