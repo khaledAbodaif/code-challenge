@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Infrastructure\Interfaces\Ingredient\IngredientRepositoryInterface;
+use App\Infrastructure\Interfaces\Ingredient\IngredientServiceInterface;
+use App\Infrastructure\Repositories\IngredientRepository;
+use App\Infrastructure\Services\Ingredient\IngredientService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -11,8 +15,24 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->registerRepositories();
+        $this->registerServices();
+
+
     }
+
+    private function registerRepositories(): void
+    {
+        $this->app->bind(IngredientRepositoryInterface::class, IngredientRepository::class);
+    }
+
+    private function registerServices(): void
+    {
+        $this->app->bind(IngredientServiceInterface::class, IngredientService::class);
+    }
+
+
+
 
     /**
      * Bootstrap any application services.
