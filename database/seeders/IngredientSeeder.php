@@ -45,10 +45,19 @@ class IngredientSeeder extends Seeder
     public function run(): void
     {
 
-        if ($this->ingredientService->isTableEmpty()) {
+        try {
 
-            $dtos = IngredientDto::fromMultipleArray($this->ingredients);
-            $this->ingredientService->createMany($dtos);
+            if ($this->ingredientService->isTableEmpty()) {
+
+                $dtos = IngredientDto::fromMultipleArray($this->ingredients);
+                $this->ingredientService->createMany($dtos);
+
+            }
+        } catch (\Exception $exception) {
+
+            echo $exception->getMessage();
+
+            exit(0);
         }
 
     }

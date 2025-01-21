@@ -46,11 +46,19 @@ class OrderController
     public function store(OrderStoreRequest $request): JsonResponse
     {
 
-        $orderData = OrderDto::fromMultipleArray($request->validated()['products']);
-        $order = $this->orderService->create($orderData);
-        if (!$order->exists) {
-            return ApiResponse::error();
+        try {
+
+            $orderData = OrderDto::fromMultipleArray($request->validated()['products']);
+            $order = $this->orderService->create($orderData);
+            if (!$order->exists) {
+                return ApiResponse::error();
+            }
+
+        } catch (\Exception $exception) {
+            return ApiResponse::error($exception->getMessage());
+
         }
+
 
         return ApiResponse::dataCreated(OrderResource::make($order));
 
