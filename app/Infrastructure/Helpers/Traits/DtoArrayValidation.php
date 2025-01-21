@@ -3,6 +3,8 @@
 namespace App\Infrastructure\Helpers\Traits;
 
 
+use App\Exceptions\InvalidDtoException;
+
 /**
  * Trait providing validation functionality for arrays of DTOs.
  *

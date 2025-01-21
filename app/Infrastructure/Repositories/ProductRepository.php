@@ -24,7 +24,6 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
        return $this->model::with('ingredients')
             ->select('id','name','price')
             ->whereIn('id',$ids)
-            ->where('is_active',1)
             ->get();
     }
 

@@ -89,7 +89,6 @@ class ProductSeeder extends Seeder
 
     /**
      * Run the database seeds.
-     * @throws ProductCreationException
      */
     public function run(): void
     {
@@ -105,6 +104,9 @@ class ProductSeeder extends Seeder
 
         }}catch (\Exception $exception){
 
+            echo $exception->getMessage();
+
+            exit(0);
         }
     }
 

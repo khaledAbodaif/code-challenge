@@ -40,6 +40,6 @@ class IngredientRepository extends BaseRepository implements IngredientRepositor
      */
     public function lockTableWhereActiveIds(array $ids): Collection
     {
-        return $this->model::lockForUpdate()->where('is_active', 1)->findMany($ids);
+        return $this->model::lockForUpdate()->findMany($ids);
     }
 }

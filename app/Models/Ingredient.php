@@ -16,7 +16,6 @@ class Ingredient extends Model
         'stock_quantity',
         'stock_alert_sent',
         'initial_stock_quantity',
-        'is_active',
         'unit'
     ];
 
