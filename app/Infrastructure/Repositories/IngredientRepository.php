@@ -2,7 +2,7 @@
 
 namespace App\Infrastructure\Repositories;
 
-use App\Infrastructure\Interfaces\Ingredient\IngredientRepositoryInterface;
+use App\Infrastructure\Interfaces\Repositories\IngredientRepositoryInterface;
 use App\Models\Ingredient;
 use Illuminate\Database\Eloquent\Collection;
 

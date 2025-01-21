@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Infrastructure\Interfaces\Ingredient\IngredientRepositoryInterface;
-use App\Infrastructure\Interfaces\Ingredient\IngredientServiceInterface;
+use App\Infrastructure\Interfaces\Services\IngredientServiceInterface;
+use App\Infrastructure\Interfaces\Repositories\IngredientRepositoryInterface;
 use App\Infrastructure\Repositories\IngredientRepository;
 use App\Infrastructure\Services\Ingredient\IngredientService;
 use Illuminate\Support\ServiceProvider;

@@ -4,18 +4,17 @@ namespace App\Infrastructure\Services\Ingredient;
 
 
 use App\Enums\UnitEnum;
-
-
 use App\Events\StockUpdatedEvent;
 use App\Exceptions\InsufficientStockException;
 use App\Infrastructure\DTOs\IngredientDto;
 use App\Infrastructure\Helpers\Traits\DtoArrayValidation;
-use App\Infrastructure\Interfaces\Ingredient\IngredientRepositoryInterface;
-use App\Infrastructure\Interfaces\Ingredient\IngredientServiceInterface;
+use App\Infrastructure\Interfaces\Services\IngredientServiceInterface;
+use App\Infrastructure\Interfaces\Repositories\IngredientRepositoryInterface;
 use App\Infrastructure\ValueObjects\Quantity;
 use App\Models\Ingredient;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
+
 
 class IngredientService implements IngredientServiceInterface
 {
