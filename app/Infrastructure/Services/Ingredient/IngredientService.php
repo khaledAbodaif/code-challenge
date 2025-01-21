@@ -68,7 +68,7 @@ class IngredientService implements IngredientServiceInterface
 
     public function update(int $id, array $data): bool
     {
-        return $this->ingredientRepository->update('id', $data);
+        return $this->ingredientRepository->update($id, $data);
     }
 
     public function lockTableForUpdate(array $ids): Collection
