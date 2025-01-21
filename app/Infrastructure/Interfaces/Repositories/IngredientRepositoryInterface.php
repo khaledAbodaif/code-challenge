@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Infrastructure\Interfaces\Ingredient;
+namespace App\Infrastructure\Interfaces\Repositories;
 
-use App\Infrastructure\Interfaces\Repositories\RepositoryInterface;
 use App\Models\Ingredient;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\QueryException;

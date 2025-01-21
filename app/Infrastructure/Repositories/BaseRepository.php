@@ -2,7 +2,6 @@
 
 namespace App\Infrastructure\Repositories;
 
-use App\Interfaces\Repositories\RepositoryInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
@@ -14,6 +13,7 @@ use Illuminate\Support\Facades\DB;
 abstract class BaseRepository
 {
 
+    use DBTransactionTrait;
     public function __construct(protected Model $model)
     {
     }
@@ -38,34 +38,6 @@ abstract class BaseRepository
         return !$this->model::exists();
     }
 
-    /**
-     * Begin a database transaction.
-     *
-     * @return void
-     */
-    public function beginTransaction(): void
-    {
-        DB::beginTransaction();
-    }
 
-    /**
-     * Commit a database transaction.
-     *
-     * @return void
-     */
-    public function commitTransaction(): void
-    {
-        DB::commit();
-    }
-
-    /**
-     * Rollback a database transaction.
-     *
-     * @return void
-     */
-    public function rollbackTransaction(): void
-    {
-        DB::rollBack();
-    }
 
 }

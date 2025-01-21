@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use App\Enums\UnitEnum;
 use App\Infrastructure\DTOs\IngredientDto;
-use App\Infrastructure\Interfaces\Ingredient\IngredientServiceInterface;
+use App\Infrastructure\Interfaces\Services\IngredientServiceInterface;
 use Illuminate\Database\Seeder;
 
 class IngredientSeeder extends Seeder

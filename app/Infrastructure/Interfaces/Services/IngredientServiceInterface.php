@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Infrastructure\Interfaces\Ingredient;
+namespace App\Infrastructure\Interfaces\Services;
 
 
 use App\Exceptions\InsufficientStockException;

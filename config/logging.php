@@ -126,6 +126,34 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+
+        'transactions' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/transactions.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+            'days' => 14,
+        ],
+
+        'order' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/order.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+            'days' => 14,
+        ],
+
+        'product' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/product.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+            'days' => 14,
+        ],
+
+        'notification' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/notification.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+            'days' => 14,
+        ],
     ],
 
 ];
